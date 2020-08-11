@@ -18,6 +18,7 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
+
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
 cd recon_profile
@@ -82,6 +83,7 @@ echo "Installing Chromium"
 sudo snap install chromium
 echo "done"
 
+#install JSParser
 echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
@@ -89,6 +91,7 @@ sudo python setup.py install
 cd ~/tools/
 echo "done"
 
+#Install Sublist3r
 echo "installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
@@ -96,13 +99,13 @@ pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
-
+#Install teh_s3_bucketeers
 echo "installing teh_s3_bucketeers"
 git clone https://github.com/tomdev/teh_s3_bucketeers.git
 cd ~/tools/
 echo "done"
 
-
+#Install wpscan
 echo "installing wpscan"
 git clone https://github.com/wpscanteam/wpscan.git
 cd wpscan*
@@ -110,42 +113,48 @@ sudo gem install bundler && bundle install --without test
 cd ~/tools/
 echo "done"
 
+#Install dirsearch
 echo "installing dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 cd ~/tools/
 echo "done"
 
-
+#Install lazys3
 echo "installing lazys3"
 git clone https://github.com/nahamsec/lazys3.git
 cd ~/tools/
 echo "done"
 
+#Install virtual host discovery
 echo "installing virtual host discovery"
 git clone https://github.com/jobertabma/virtual-host-discovery.git
 cd ~/tools/
 echo "done"
 
-
+#Install sqlmap
 echo "installing sqlmap"
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 cd ~/tools/
 echo "done"
 
+#Install knock
 echo "installing knock.py"
 git clone https://github.com/guelfoweb/knock.git
 cd ~/tools/
 echo "done"
 
+#Install lazyrecon
 echo "installing lazyrecon"
 git clone https://github.com/nahamsec/lazyrecon.git
 cd ~/tools/
 echo "done"
 
+#Install nmap
 echo "installing nmap"
 sudo apt-get install -y nmap
 echo "done"
 
+#Install massdns
 echo "installing massdns"
 git clone https://github.com/blechschmidt/massdns.git
 cd ~/tools/massdns
@@ -153,6 +162,7 @@ make
 cd ~/tools/
 echo "done"
 
+#Install asnlookup
 echo "installing asnlookup"
 git clone https://github.com/yassineaboukir/asnlookup.git
 cd ~/tools/asnlookup
@@ -160,22 +170,27 @@ pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
+#Install httprobe
 echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
 echo "done"
 
+#Install unfurl
 echo "installing unfurl"
 go get -u github.com/tomnomnom/unfurl 
 echo "done"
 
+#Install waybackurls
 echo "installing waybackurls"
 go get github.com/tomnomnom/waybackurls
 echo "done"
 
+#Install crtndstry
 echo "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 echo "done"
 
+#Install Seclists
 echo "downloading Seclists"
 cd ~/tools/
 git clone https://github.com/danielmiessler/SecLists.git
@@ -184,8 +199,6 @@ cd ~/tools/SecLists/Discovery/DNS/
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
-
-
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
